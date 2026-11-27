@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: "Plus Jakarta Sans", "Noto Sans TC", system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #d8ecf0;
+    color: #16222a;
+    user-select: none;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.font-mono-num {
+  font-family: "JetBrains Mono", monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.school-label-3d {
+  pointer-events: auto;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(250, 252, 253, 0.92);
+  border: 1px solid rgba(22, 34, 42, 0.14);
+  box-shadow: 0 3px 10px rgba(15, 23, 42, 0.12);
+  color: #16222a;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: transform 0.16s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.16s ease, border-color 0.16s ease;
+}
+
+.school-label-3d:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  border-color: rgba(13, 110, 122, 0.45);
+}
+
+.school-label-3d.is-active {
+  background: #0f4c5c;
+  color: #ffffff;
+  border-color: #0f4c5c;
+}
+
+.school-label-3d.is-dimmed {
+  opacity: 0.32;
+}
+
+.school-label-3d .level-tag {
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.72;
+}
+
+.school-label-3d .visited-check {
+  color: #0d9488;
+  font-weight: 700;
+  font-size: 11px;
+}
+
+.school-label-3d.is-active .visited-check {
+  color: #5eead4;
+}
+
+.explorer-label-3d {
+  pointer-events: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(15, 76, 92, 0.9);
+  color: #f8fafc;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .school-label-3d {
+    transition: none;
+  }
+}
